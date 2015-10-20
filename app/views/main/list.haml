@@ -1,0 +1,22 @@
+%h2 Listing shops
+
+%p
+  = will_paginate @shops
+
+%table
+  %thead
+  %tbody
+    %tr
+      %th name
+      %th zip_code
+      %th address
+      %th phone
+    - @shops.each do |e|
+      %tr
+        %td= e.name
+        %td= e.zip_code
+        %td= e.address
+        %td= e.phone
+
+%p
+  = will_paginate @shops
