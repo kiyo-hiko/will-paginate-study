@@ -37,6 +37,7 @@ I18n.default_locale = :ja
 Padrino.before_load do
   require 'will_paginate/view_helpers/sinatra'
   require 'will_paginate/active_record'
+  require 'will_paginate/array'
   # register WillPaginate::Sinatra
 end
 

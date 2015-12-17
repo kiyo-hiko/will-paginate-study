@@ -1,0 +1,16 @@
+%h2= 'テスト'
+
+%p
+  = will_paginate @ns
+
+%table
+  %thead
+  %tbody
+    %tr
+      %th number
+      - @ns.each do |n|
+        %tr
+          %td= n
+%p
+  = will_paginate @ns
+

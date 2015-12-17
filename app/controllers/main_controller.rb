@@ -4,7 +4,12 @@ Paginate::App.controllers do
   end
 
   get :index do
-    @shops = Shop.where(name: '支店500').paginate(page: params[:page], per_page: 50)
+    @shops = Shop.all.paginate(page: params[:page], per_page: 50)
     haml :'main/list'
+  end
+
+  get :array do
+    @ns = (1..100).to_a.paginate(page: params[:page])
+    haml :'array/list'
   end
 end
